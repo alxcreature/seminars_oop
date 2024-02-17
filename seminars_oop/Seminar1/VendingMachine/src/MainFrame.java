@@ -1,7 +1,6 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.*;
@@ -75,13 +74,7 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                //jlProducts.setLis
-                //String firstName = tfFirstName.getText();
-                //String lastName = tfFirstName.getText();
-                //lbWelcome.setText("Hello " + firstName + " " + lastName);
                 lbBuy.setText(jlProducts.getSelectedValue()+" -> Bout!");
-                //jlProducts.remove(jlProducts.getSelectedIndex());
-                //System.out.println(jlProducts.getSelectedIndex());
                 if (jlProducts.getSelectedIndex() >=0) {
                     vendingMachine.getAssort().remove(jlProducts.getSelectedIndex());
                     System.out.println("vendingMachine.getAssort() = " + vendingMachine.getAssort());
@@ -98,11 +91,7 @@ public class MainFrame extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-
-//                tfFirstName.setText("");
-//                tfFirstName.setText("");
                 lbWelcome.setText("Ничего");
-
             }
 
         });
@@ -127,11 +116,8 @@ public class MainFrame extends JFrame {
         mainPanel.setBackground(new Color(128, 128, 255));
 
         mainPanel.add(formPanel, BorderLayout.NORTH);
-
         mainPanel.add(lbWelcome, BorderLayout.CENTER);
-
         mainPanel.add(buttonPanel, BorderLayout.SOUTH);
-
         add(mainPanel);
 
         mainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -163,16 +149,10 @@ public class MainFrame extends JFrame {
             i++;
             sb = "";
         }
-        //jlProducts.updateUI();
     }
 
     public DefaultListModel<String> getProductsList() {
-        // List<Product> assort = new ArrayList<>();
-        
-        //for (int i=0; i<productsModel.size(); i++) {
-            return productsModel;
-        //    i++;
-        //}
+        return productsModel;
     }
 
     public static void main(String[] arg) {

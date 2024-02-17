@@ -40,6 +40,5 @@ public class App {
 
         MainFrame myFrame = new MainFrame();
         myFrame.initialize(venMachine);
-        //myFrame.setProductsList(venMachine.getProducts());
     }
 }

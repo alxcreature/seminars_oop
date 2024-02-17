@@ -51,7 +51,7 @@ public class HotDrinks extends Bottle{
 
     @Override
     public String toString() {
-        return super.toString() + "\ntemperature = " + temperature;
+        return super.toString() + "temperature = " + temperature + "\n";
     }
     
 }
