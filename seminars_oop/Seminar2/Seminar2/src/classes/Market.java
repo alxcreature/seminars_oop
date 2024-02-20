@@ -126,7 +126,7 @@ public class Market implements iMarketBehaviour,iQueueBehaviour,iReturnOrder{
             }
             //Проверка принадлежности участника акций + проверка на отказ покупателя от заказа
             if (actor instanceof StockClient && !actor.getActor().isReturnOrder) {
-                stockCounter++; //Увеличиваем счётчик участников акций
+                ((StockClient)actor).stockCounter++; //Увеличиваем счётчик участников акций
                 System.out.println(actor.getActor().getName() + " клиент ID=" + ((StockClient) actor).getIdStockClient()
                         + ", участвует в акции: \"" + ((StockClient) actor).getStockName() + "\", количество участников в акциях: " + stockCounter);
                 //Отказ в оформлении и выдаче заказа в качестве участника акций
