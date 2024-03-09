@@ -2,22 +2,10 @@ package DIP;
 /***
  * @apiNote Базовый класс экземпляра двигателя
  */
-public class Engine {
-    private String typeEngine;
-
-    public String getTypeEngine() {
-        return typeEngine;
-    }
-
-    public Engine(String typeEngine) {
-        this.typeEngine = typeEngine;
-    }
-
+public interface Engine {
     /**
-     * Запуск двигателя экемпляра класса
+     * Запуск экемпляра класса двигателя
      */
-    public void start() {
-            System.out.println("Brbrbrbrrrr....:"+typeEngine);
-    }
-
+    public void start();
+    public Engine getEngine();
 }

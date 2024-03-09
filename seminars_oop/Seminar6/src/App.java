@@ -4,6 +4,8 @@ import java.util.List;
 
 import DIP.Bus;
 import DIP.Car;
+import DIP.DieselEngine;
+import DIP.PetrolEngine;
 import ISPLSP.Circle;
 import ISPLSP.Cube;
 import ISPLSP.Square;
@@ -40,8 +42,8 @@ public class App {
 
         //2е задание OSP
         SpeedCalculation spc = new SpeedCalculation();
-        Car car = new Car(200);
-        Bus bus = new Bus(180);
+        Car car = new Car(new PetrolEngine(),200);
+        Bus bus = new Bus(new DieselEngine(), 180);
         System.out.println("Предельно-допустимая скорость: " + bus.getType() + " - " + spc.calculateAllowedSpeed(car));
         System.out.println("Предельно-допустимая скорость: " + bus.getType() + " - " + spc.calculateAllowedSpeed(bus));
 
